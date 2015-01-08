@@ -51,7 +51,6 @@
 #define MIN_BLEND_HI  -128
 #define MAX_BLEND_HI  127
 
-
 /* ---- HCI Packet structures ---- */
 #define RADIO_HCI_COMMAND_HDR_SIZE sizeof(struct radio_hci_command_hdr)
 #define RADIO_HCI_EVENT_HDR_SIZE   sizeof(struct radio_hci_event_hdr)
