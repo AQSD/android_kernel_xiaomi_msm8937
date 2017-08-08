@@ -332,7 +332,7 @@ int pa_mode = EXT_PA_MODE;
 		}
 #ifdef CONFIG_MACH_XIAOMI_LAND
 		gpio_set_value_cansleep(pdata->spk_ext_pa_gpio, enable);
-#else
+#endif
 	} else {
 		gpio_set_value_cansleep(pdata->spk_ext_pa_gpio, enable);
 #ifdef CONFIG_MACH_XIAOMI_LAND

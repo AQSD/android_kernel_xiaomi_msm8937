@@ -139,11 +139,11 @@ enum {
 
 static const DECLARE_TLV_DB_SCALE(digital_gain, 0, 1, 0);
 static const DECLARE_TLV_DB_SCALE(analog_gain, 0, 25, 1);
-#ifdef CONFIG_MACH_XIAOMI_LAND
 static struct snd_soc_dai_driver msm8x16_wcd_i2s_dai[];
+#ifdef CONFIG_MACH_XIAOMI_LAND
 static struct switch_dev accdet_data;
-#endif
 static int accdet_state;
+#endif
 /* By default enable the internal speaker boost */
 static bool spkr_boost_en = true;
 
@@ -5891,7 +5891,7 @@ static int msm8x16_wcd_codec_probe(struct snd_soc_codec *codec)
 		return -ENOMEM;
 	}
 
-#else
+#endif
 	msm8x16_wcd_priv->mclk_enabled = false;
 	msm8x16_wcd_priv->clock_active = false;
 	msm8x16_wcd_priv->config_mode_active = false;

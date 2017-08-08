@@ -474,6 +474,8 @@ static void wcd_cancel_hs_detect_plug(struct wcd_mbhc *mbhc,
 	WCD_MBHC_RSC_LOCK(mbhc);
 }
 
+#ifdef CONFIG_MACH_XIAOMI_LAND
+#else
 static void wcd_mbhc_clr_and_turnon_hph_padac(struct wcd_mbhc *mbhc)
 {
 	bool pa_turned_on = false;
@@ -505,7 +507,7 @@ static void wcd_mbhc_clr_and_turnon_hph_padac(struct wcd_mbhc *mbhc)
 		usleep_range(wg_time * 1000, wg_time * 1000 + 50);
 	}
 }
-
+#endif
 static bool wcd_mbhc_is_hph_pa_on(struct wcd_mbhc *mbhc)
 {
 	bool hph_pa_on = false;
