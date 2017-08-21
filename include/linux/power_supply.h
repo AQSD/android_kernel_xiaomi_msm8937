@@ -307,7 +307,7 @@ struct power_supply {
 	struct led_trigger *charging_green_trig;
 	char *charging_green_trig_name;
 	struct led_trigger *charging_blue_trig;
-
+	char *charging_blue_trig_name;
 	struct led_trigger *charging_full_trig;
 	char *charging_full_trig_name;
 	struct led_trigger *charging_trig;
