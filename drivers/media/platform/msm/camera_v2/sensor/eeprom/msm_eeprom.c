@@ -679,6 +679,7 @@ static int msm_eeprom_config(struct msm_eeprom_ctrl_t *e_ctrl,
 			break;
 		}
 		if (e_ctrl->cal_data.num_data == 0) {
+			pr_err("%s:%d \n", __func__, __LINE__);
 			rc = eeprom_init_config(e_ctrl, argp);
 			if (rc < 0) {
 				pr_err("%s:%d Eeprom init failed\n",
