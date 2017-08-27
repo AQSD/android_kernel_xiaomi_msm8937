@@ -1,4 +1,4 @@
-config INPUT_FINGERPRINT
+config INPUT_FINGERPRIN
 	tristate "Fingerprint driver support"
 	help
 	  Say Y here to enable goodix fingerprint driver support!
